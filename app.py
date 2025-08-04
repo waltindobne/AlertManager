@@ -23,7 +23,7 @@ def alert():
         starts_at_fmt = datetime.fromisoformat(starts_at.replace("Z", "+00:00")).strftime('%d/%m/%Y %H:%M:%S') if starts_at else "N/A"
 
         message = (
-            f"*🚨 Alerta {status}*\n"
+            f"🚨 *Alerta* *{status}*\n"
             f"• *Nome:* {alert_name}\n"
             f"• *Instância:* {instance}\n"
             f"• *Severidade:* {severity}\n"
