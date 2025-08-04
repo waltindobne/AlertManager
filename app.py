@@ -36,7 +36,7 @@ def alert():
                         "header": {
                             "title": f"🚨 Alerta {status}",
                             "subtitle": f"{alert_name} - {severity.upper()}",
-                            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Alert_icon.svg",
+                            "imageUrl": "https://thumbs.dreamstime.com/b/aviso-precau%C3%A7%C3%A3o-aten%C3%A7%C3%A3o-%C3%ADcone-de-alerta-ponto-exclama%C3%A7%C3%A3o-em-forma-tri%C3%A2ngulo-vetor-estoque-161011022.jpg",
                             "imageType": "CIRCLE",
                             "imageAltText": "Ícone de alerta"
                         },
