@@ -23,12 +23,12 @@ def alert():
         starts_at_fmt = datetime.fromisoformat(starts_at.replace("Z", "+00:00")).strftime('%d/%m/%Y %H:%M:%S') if starts_at else "N/A"
 
         message = (
-            f"• <b>Alerta</b> {status}*\n"
-            f"• <b>Nome:</b> {alert_name}\n"
-            f"• <b>Instância:</b> {instance}\n"
-            f"• <b>Severidade:</b> {severity}\n"
-            f"• <b>Início:</b> {starts_at_fmt}\n"
-            f"• <b>Descrição:</b> {description}"
+            f"• *Alerta* {status}*\n"
+            f"• *Nome:* {alert_name}\n"
+            f"• *Instância:* {instance}\n"
+            f"• *Severidade:* {severity}\n"
+            f"• *Início:* {starts_at_fmt}\n"
+            f"• *Descrição:* {description}"
         )
 
     except Exception as e:
