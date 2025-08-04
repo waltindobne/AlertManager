@@ -22,8 +22,15 @@ def alert():
         starts_at = alert_info.get('startsAt')
         starts_at_fmt = datetime.fromisoformat(starts_at.replace("Z", "+00:00")).strftime('%d/%m/%Y %H:%M:%S') if starts_at else "N/A"
 
+        if alert_icon == "CertManagerCertificateExpired":
+            description_prefix = "🚨"
+        elif alert_icon == "CertManagerCertificateExpiringSoon":
+            description_prefix = "⚠️"
+        else:
+            description_prefix = "🤷‍♂️"
+
         message = (
-            f"• *Alerta* {status}*\n"
+            f"*{alert_icon}Alerta {status}*\n"
             f"• *Nome:* {alert_name}\n"
             f"• *Instância:* {instance}\n"
             f"• *Severidade:* {severity}\n"
