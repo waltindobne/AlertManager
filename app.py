@@ -29,7 +29,6 @@ def alert():
         }
         border_color = color_map.get(severity.lower(), "#808080")
 
-        payload = {
             payload = {
                 "cardsV2": [
                     {
@@ -73,7 +72,6 @@ def alert():
                     }
                 ]
             }
-        }
 
     except Exception as e:
         return jsonify({'error': str(e)}), 400
