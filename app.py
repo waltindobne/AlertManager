@@ -54,7 +54,7 @@ def alert():
                                     },
                                     {
                                         "decoratedText": {
-                                            "startIcon": {"knownIcon": "CLOCK"},
+                                            "startIcon": {"knownIcon": "TIMER"},
                                             "text": f"<b>Início:</b> {starts_at_fmt}"
                                         }
                                     },
