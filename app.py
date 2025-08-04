@@ -29,49 +29,49 @@ def alert():
         }
         border_color = color_map.get(severity.lower(), "#808080")
 
-            payload = {
-                "cardsV2": [
-                    {
-                        "cardId": "alert-card",
-                        "card": {
-                            "header": {
-                                "title": f"🚨 Alerta {status}",
-                                "subtitle": f"{alert_name} - {severity.upper()}",
-                                "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Alert_icon.svg",
-                                "imageType": "CIRCLE",
-                                "imageAltText": "Ícone de alerta"
-                            },
-                            "sections": [
-                                {
-                                    "header": "Detalhes do Alerta",
-                                    "collapsible": True,
-                                    "uncollapsibleWidgetsCount": 1,
-                                    "widgets": [
-                                        {
-                                            "decoratedText": {
-                                                "startIcon": {"knownIcon": "PERSON"},
-                                                "text": f"<b>Instância:</b> {instance}"
-                                            }
-                                        },
-                                        {
-                                            "decoratedText": {
-                                                "startIcon": {"knownIcon": "TIMER"},
-                                                "text": f"<b>Início:</b> {starts_at_fmt}"
-                                            }
-                                        },
-                                        {
-                                            "decoratedText": {
-                                                "startIcon": {"knownIcon": "DESCRIPTION"},
-                                                "text": f"<b>Descrição:</b> {description}"
-                                            }
+        payload = {
+            "cardsV2": [
+                {
+                    "cardId": "alert-card",
+                    "card": {
+                        "header": {
+                            "title": f"🚨 Alerta {status}",
+                            "subtitle": f"{alert_name} - {severity.upper()}",
+                            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Alert_icon.svg",
+                            "imageType": "CIRCLE",
+                            "imageAltText": "Ícone de alerta"
+                        },
+                        "sections": [
+                            {
+                                "header": "Detalhes do Alerta",
+                                "collapsible": True,
+                                "uncollapsibleWidgetsCount": 1,
+                                "widgets": [
+                                    {
+                                        "decoratedText": {
+                                            "startIcon": {"knownIcon": "PERSON"},
+                                            "text": f"<b>Instância:</b> {instance}"
                                         }
-                                    ]
-                                }
-                            ]
-                        }
+                                    },
+                                    {
+                                        "decoratedText": {
+                                            "startIcon": {"knownIcon": "TIMER"},
+                                            "text": f"<b>Início:</b> {starts_at_fmt}"
+                                        }
+                                    },
+                                    {
+                                        "decoratedText": {
+                                            "startIcon": {"knownIcon": "DESCRIPTION"},
+                                            "text": f"<b>Descrição:</b> {description}"
+                                        }
+                                    }
+                                ]
+                            }
+                        ]
                     }
-                ]
-            }
+                }
+            ]
+        }
 
     except Exception as e:
         return jsonify({'error': str(e)}), 400
