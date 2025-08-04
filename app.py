@@ -21,7 +21,6 @@ def alert():
         starts_at = alert_info.get('startsAt')
         starts_at_fmt = datetime.fromisoformat(starts_at.replace("Z", "+00:00")).strftime('%d/%m/%Y %H:%M:%S') if starts_at else "N/A"
 
-        # Define cor da borda de acordo com severidade
         color_map = {
             "critical": "#FF0000",
             "warning": "#FFA500",
@@ -37,7 +36,7 @@ def alert():
                         "header": {
                             "title": f"🚨 Alerta {status}",
                             "subtitle": f"{alert_name} - {severity.upper()}",
-                            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3b/Alert_icon.svg",
+                            "imageUrl": "https://thumbs.dreamstime.com/b/aviso-precau%C3%A7%C3%A3o-aten%C3%A7%C3%A3o-%C3%ADcone-de-alerta-ponto-exclama%C3%A7%C3%A3o-em-forma-tri%C3%A2ngulo-vetor-estoque-161011022.jpg",
                             "imageType": "CIRCLE",
                             "imageAltText": "Ícone de alerta"
                         },
@@ -55,7 +54,7 @@ def alert():
                                     },
                                     {
                                         "decoratedText": {
-                                            "startIcon": {"knownIcon": "TIMER"},
+                                            "startIcon": {"knownIcon": "CLOCK"},
                                             "text": f"<b>Início:</b> {starts_at_fmt}"
                                         }
                                     },
