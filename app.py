@@ -4,7 +4,7 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-WEBHOOK_URL = "https://chat.googleapis.com/v1/spaces/AAQA0K--77E/messages?key=CHAVE_AQUI&token=TOKEN_AQUI"
+WEBHOOK_URL = "https://chat.googleapis.com/v1/spaces/AAQA0K--77E/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=CKykf6Cstty3Wq9uvtYEC5oyhOLjRE6Sa5aAnTIXMjg"
 
 @app.route('/alert', methods=['POST'])
 def alert():
